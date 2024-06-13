@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e81b0; /* Color de fondo general */
+    background-image: url('D:/Gonzalo/sisvitaG5/src/assets/imagenes_menu/Principal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .header {
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  #logo {
+    max-width: 600px;
+    margin-top: 40px;
+  }
+  
+  #slogan {
+    position: absolute;
+    top: -50px; /* Ajuste para posicionar el eslogan sobre el logo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #74bc9c; /* Color de fondo del eslogan */
+    color: #ffffff; /* Color del texto del eslogan */
+    padding: 15px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 22px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-top: 40px;
+    color: #ffffff; /* Color del título */
+    font-weight: bold;
+  }
+  
+  .main-content {
+    background-color: #ffffff; /* Color de fondo del contenido principal */
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left; /* Alineación del texto */
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666; /* Color del texto principal */
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #0b7ae2; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Quitar subrayado del botón */
+  }
+  
+  .btn:hover {
+    background-color: #0862b5; /* Color de fondo al pasar el cursor */
+  }

@@ -1,0 +1,75 @@
+.navbar-custom {
+    background-color: #74bc9c; /* Color de fondo de la barra de navegación */
+  }
+  
+  .navbar-nav .nav-link {
+    color: white; /* Color de texto de los enlaces */
+    margin-right: 20px; /* Espaciado entre enlaces */
+    transition: color 0.3s ease; /* Transición de color al pasar el mouse */
+    font-size: 20px; /* Tamaño de la fuente */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Cambio de color al pasar el mouse */
+  }
+  
+  .navbar-nav .btn {
+    margin-left: 10px; /* Espaciado entre botones */
+  }
+  
+  .navbar-brand img {
+    height: 85px; /* Tamaño de la imagen del logo */
+    margin-right: 25px; /* Espaciado entre la imagen y el texto */
+  }
+  
+  .navbar-brand {
+    font-weight: bold; /* Grosor de la fuente */
+    font-size: 32px; /* Tamaño de la fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    display: flex; /* Contenedor flexible para alinear verticalmente */
+    align-items: center; /* Alineación vertical */
+    color: white; /* Color de texto del nombre */
+  }
+  
+  .navbar-brand span {
+    letter-spacing: 8px; /* Espaciado entre letras */
+  }
+  
+  .navbar-toggler {
+    border-color: white; /* Color del borde del botón hamburguesa */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: white; /* Color del icono hamburguesa */
+  }
+  
+  .navbar-nav {
+    align-items: center; /* Alineación vertical de elementos */
+  }
+  
+  .btn-registrarse {
+    font-weight: bold;
+    background-color: #6c757d; /* Color de fondo del botón Regístrate */
+    border-color: #6c757d; /* Color del borde del botón Regístrate */
+    margin-right: 10px; /* Espaciado entre botones */
+    padding: 10px 20px; /* Padding del botón */
+    font-size: 18px; /* Tamaño de la fuente */
+  }
+  
+  .btn-registrarse:hover {
+    background-color: #5a6268; /* Cambio de color al pasar el mouse */
+    border-color: #5a6268; /* Cambio de color del borde al pasar el mouse */
+  }
+  
+  .btn-iniciar {
+    font-weight: bold;
+    background-color: #ffc107; /* Color de fondo del botón Iniciar sesión */
+    border-color: #ffc107; /* Color del borde del botón Iniciar sesión */
+    padding: 10px 20px; /* Padding del botón */
+    font-size: 18px; /* Tamaño de la fuente */
+  }
+  
+  .btn-iniciar:hover {
+    background-color: #e0a800; /* Cambio de color al pasar el mouse */
+    border-color: #e0a800; /* Cambio de color del borde al pasar el mouse */
+  }
