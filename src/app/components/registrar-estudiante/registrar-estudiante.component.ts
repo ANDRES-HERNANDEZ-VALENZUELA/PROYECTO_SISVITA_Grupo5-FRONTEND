@@ -21,7 +21,7 @@ export class RegistrarEstudianteComponent {
       email: new FormControl('',[]),
       facultad: new FormControl('',[]),
       first_name: new FormControl('',[]),
-      id: new FormControl('',[]),
+      password: new FormControl('',[]),
       last_name: new FormControl('',[]),
       student_code: new FormControl('',[]),
     });
