@@ -50,6 +50,7 @@ export class RegistrarEstudianteComponent {
     this.EstudianteService.getEstudiantes().subscribe(
       (result:any)=>{
         this.estudianteArray=result.data;
+        console.log(this.estudianteArray)
       },(err:any)=>{
         console.log(err);
         Swal.close();
@@ -63,8 +64,17 @@ export class RegistrarEstudianteComponent {
   }
 
   createEstudiante(): void {
-    const jsonString = JSON.stringify(this.estudianteForm.value);
-    this.EstudianteService.registraEstudiante(jsonString).subscribe(
+    const estudiante_usuario={
+      email:this.estudianteForm.value.email,
+      password:this.estudianteForm.value.password,
+      first_name:this.estudianteForm.value.first_name,
+      last_name:this.estudianteForm.value.last_name,
+      facultad:this.estudianteForm.value.facultad,
+      codigo_estudiante:this.estudianteForm.value.student_code,
+    }
+    console.log("lo que agarró del form: ", estudiante_usuario);
+
+    this.EstudianteService.registraEstudiante(estudiante_usuario).subscribe(
       (result:any) => {
         
         Swal.fire({
@@ -83,7 +93,7 @@ export class RegistrarEstudianteComponent {
         };
       },
       error => {
-        console.log(jsonString);
+        console.log();
         Swal.fire({
           icon: 'error',
           title: 'Error al registrar',
