@@ -1,0 +1,23 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .card-header {
+    text-align: center;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .form-check {
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
