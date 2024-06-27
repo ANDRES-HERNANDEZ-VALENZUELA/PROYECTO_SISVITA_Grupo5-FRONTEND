@@ -20,20 +20,20 @@
     padding: 15px 20px;
     color: #333;
     transition: all 0.3s;
-    border-bottom: 1px solid transparent; /* Borde inferior inicial transparente */
-    border-left: 3px solid transparent; /* Borde izquierdo inicial transparente */
+    border-bottom: 1px solid transparent;
+    border-left: 3px solid transparent;
 }
 
 .sidebar .nav-link:hover {
     background-color: #e9ecef;
     color: #007bff;
-    border-bottom-color: #007bff; /* Color del borde inferior al pasar el ratón */
+    border-bottom-color: #007bff;
 }
 
 .sidebar .nav-link.active {
     background-color: #007bff;
     color: #fff;
-    border-left-color: #007bff; /* Color del borde izquierdo en el enlace activo */
+    border-left-color: #007bff;
 }
 
 /* Estilo para la información del usuario */
@@ -41,16 +41,16 @@
     background-color: #f8f9fa;
     color: #000000;
     padding: 15px;
-    border-bottom: 1px solid #dee2e6; /* Borde inferior para separar de los enlaces */
-    text-align: center; /* Alinea el contenido al centro */
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
 }
 
 .usuario-info img {
-    width: 120px; /* Ancho de la imagen */
-    height: 120px; /* Altura de la imagen */
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-    border: 2px solid #000000; /* Borde blanco alrededor de la imagen */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #000000;
 }
 
 .usuario-info h5 {
@@ -61,5 +61,11 @@
 
 /* Estilos adicionales */
 .sidebar .nav-link + .nav-link {
-    margin-top: 1px; /* Espacio entre enlaces */
+    margin-top: 1px;
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 250px; /* Asegúrate de que el contenido principal tenga suficiente espacio a la izquierda */
+    padding: 20px;
 }
