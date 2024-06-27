@@ -1,0 +1,9 @@
+<div *ngFor="let question of questions">
+    <p>{{ question.text }}</p>
+    <div *ngFor="let option of question.options">
+      <input type="radio" [name]="question.id" [value]="option.id" (change)="selectOption(question.id, option.id)">
+      {{ option.text }}
+    </div>
+  </div>
+  <button (click)="submitTest()">Diagnóstico</button>
+  

@@ -13,5 +13,5 @@ import { RegistrarEstudianteComponent } from './components/registrar-estudiante/
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'sisvitaG5';
+  title = 'SISIVITA (GRUPO5)';
 }

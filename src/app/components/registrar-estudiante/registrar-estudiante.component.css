@@ -13,8 +13,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 60%; /* Aumenta el ancho al 80% de la pantalla */
-    max-width: 600px; /* Ancho máximo de 1000px */
+    width: 100%; /* Aumenta el ancho al 80% de la pantalla */
+    max-width: 1000px; /* Ancho máximo de 1000px */
 }
 .register-container img {
     width: 150px;
