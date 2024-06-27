@@ -1,0 +1,107 @@
+<!-- resultado.component.html -->
+<div class="container-fluid">
+    <div class="row">
+  
+<!-- Barra lateral -->
+<nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+    <div class="position-sticky">
+        <!-- Espacio para la foto y nombre del usuario -->
+        <div class="usuario-info text-center py-4">
+            <img src="./assets/imagenes_menu/Robot.png" alt="Foto de perfil" class="rounded-circle" style="width: 80px;">
+            <h5 class="mt-2">Nombre de Usuario</h5>
+        </div>
+        
+        <!-- Enlaces de navegación -->
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/vercontenido">Perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/resultado">Ver Resultado</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/test">Test</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ayuda</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- Contenido principal -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="container">
+                <h2>Resultados</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Usuario 1</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Usuario 2</td>
+                            <td>90%</td>
+                        </tr>
+                        <!-- Agrega aquí dinámicamente los datos según tu lógica de Angular -->
+                    </tbody>
+                </table>
+  
+                <h2>Detalles de Resultados</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Usuario 1</td>
+                            <td>2024-06-26</td>
+                            <td>Detalles del resultado 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Usuario 2</td>
+                            <td>2024-06-27</td>
+                            <td>Detalles del resultado 2</td>
+                        </tr>
+                        <!-- Agrega aquí dinámicamente los datos según tu lógica de Angular -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+  
+    </div>
+</div>
