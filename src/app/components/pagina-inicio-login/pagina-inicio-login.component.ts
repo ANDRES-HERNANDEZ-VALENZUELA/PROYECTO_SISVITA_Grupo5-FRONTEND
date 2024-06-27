@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EstudianteService } from '../../service/estudiante/estudiante.service';
 import { Estudiante } from '../../model/estudiante';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-pagina-inicio-login',
@@ -21,7 +22,7 @@ export class PaginaInicioLoginComponent {
   ){
     this.user = localStorage.getItem('user');
     const estudiante_usuario={
-      
+
     }
   }
 

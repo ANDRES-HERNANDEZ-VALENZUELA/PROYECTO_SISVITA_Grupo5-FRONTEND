@@ -63,3 +63,9 @@
 .sidebar .nav-link + .nav-link {
     margin-top: 1px; /* Espacio entre enlaces */
 }
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 250px; /* Asegúrate de que el contenido principal tenga suficiente espacio a la izquierda */
+    padding: 20px;
+}
