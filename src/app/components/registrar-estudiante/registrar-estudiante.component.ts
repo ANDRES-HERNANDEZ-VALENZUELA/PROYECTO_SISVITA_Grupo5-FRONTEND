@@ -91,6 +91,7 @@ export class RegistrarEstudianteComponent {
           student_code: '',
           facultad: ''
         };
+        window.location.href = 'login';
       },
       error => {
         console.log();
