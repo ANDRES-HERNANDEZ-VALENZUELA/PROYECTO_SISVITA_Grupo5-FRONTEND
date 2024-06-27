@@ -43,7 +43,7 @@ export class LoginComponent {
       this.usuarioService.login(usuario).subscribe(
        (res: any) => {
           localStorage.setItem('token', res.access_token);
-          this.router.navigate(['test']);
+          this.router.navigate(['vercontenido']);
           Swal.fire({
             icon: 'success',
             title: 'Bienvenido!',

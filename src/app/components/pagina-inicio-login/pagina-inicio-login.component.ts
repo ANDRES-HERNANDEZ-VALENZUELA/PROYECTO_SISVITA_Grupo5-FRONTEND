@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-inicio-login',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './pagina-inicio-login.component.css'
 })
 export class PaginaInicioLoginComponent {
+
+  user: String | null='' ;
+  constructor(
+    private router: Router
+  ){
+    this.user = localStorage.getItem('user');
+  }
 
 }

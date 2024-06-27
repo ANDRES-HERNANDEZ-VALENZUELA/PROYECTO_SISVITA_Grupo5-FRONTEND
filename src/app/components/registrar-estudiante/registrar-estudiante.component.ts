@@ -4,6 +4,7 @@ import {ReactiveFormsModule, FormControl, FormsModule, FormGroup} from '@angular
 import { EstudianteService } from '../../service/estudiante/estudiante.service';
 import Swal from 'sweetalert2';
 import { CommonModule } from '@angular/common';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrar-estudiante',
@@ -16,7 +17,7 @@ export class RegistrarEstudianteComponent {
   estudianteArray: Estudiante[]=[];
   estudianteForm: FormGroup;
   
-  constructor(private EstudianteService: EstudianteService){
+  constructor(private EstudianteService: EstudianteService, private router: Router){
     this.estudianteForm=new FormGroup({
       email: new FormControl('',[]),
       facultad: new FormControl('',[]),
@@ -76,6 +77,7 @@ export class RegistrarEstudianteComponent {
 
     this.EstudianteService.registraEstudiante(estudiante_usuario).subscribe(
       (result:any) => {
+        this.router.navigate(['vercontenido']);
         
         Swal.fire({
           icon: 'success',
