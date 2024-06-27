@@ -36,4 +36,9 @@ export class EstudianteService {
   eliminarEstudiante(estudiante: Estudiante){
     return this.http.delete(`${this.BASE_URL}/delete`, {body:estudiante});
   }
+
+  getEstudianteporEmail(): Observable<Estudiante>{
+    return this.http.get<Estudiante>(`${this.BASE_URL}/buscarPorEmail`,{headers: this.headers}); //cuando llame a esa ruta del dolar, descarga
+                                                                   //el resultado en el objeto Estudiante
+  }
 }

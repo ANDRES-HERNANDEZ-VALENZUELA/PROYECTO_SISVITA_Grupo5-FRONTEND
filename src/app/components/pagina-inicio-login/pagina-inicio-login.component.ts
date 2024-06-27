@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { EstudianteService } from '../../service/estudiante/estudiante.service';
+import { Estudiante } from '../../model/estudiante';
 
 @Component({
   selector: 'app-pagina-inicio-login',
@@ -11,10 +13,19 @@ import { Router } from '@angular/router';
 export class PaginaInicioLoginComponent {
 
   user: String | null='' ;
+  estudiante: Estudiante=;
+
   constructor(
-    private router: Router
+    private router: Router,
+    private EstudianteService: EstudianteService,
   ){
     this.user = localStorage.getItem('user');
+    const estudiante_usuario={
+      
+    }
   }
 
+  getEstudianteporEmail():void{
+    this.EstudianteService.getEstudianteporEmail
+  }
 }

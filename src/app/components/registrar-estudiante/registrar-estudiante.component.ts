@@ -77,7 +77,6 @@ export class RegistrarEstudianteComponent {
 
     this.EstudianteService.registraEstudiante(estudiante_usuario).subscribe(
       (result:any) => {
-        this.router.navigate(['vercontenido']);
         
         Swal.fire({
           icon: 'success',

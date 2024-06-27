@@ -37,8 +37,6 @@ export class TestComponent implements OnInit {
       answers: this.answers
     };
 
-    console.log("ca",testData)
-
     this.testService.submitTest(testData).subscribe(response => {
       if (response.diagnosis) {
         Swal.fire({
