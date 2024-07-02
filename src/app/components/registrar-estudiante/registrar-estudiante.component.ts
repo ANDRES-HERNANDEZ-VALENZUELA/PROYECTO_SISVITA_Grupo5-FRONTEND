@@ -5,11 +5,12 @@ import { EstudianteService } from '../../service/estudiante/estudiante.service';
 import Swal from 'sweetalert2';
 import { CommonModule } from '@angular/common';
 import { Route, Router } from '@angular/router';
+import { NavbarSimpleComponent } from '../navbar-simple/navbar-simple.component';
 
 @Component({
   selector: 'app-registrar-estudiante',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NavbarSimpleComponent],
   templateUrl: './registrar-estudiante.component.html',
   styleUrl: './registrar-estudiante.component.css'
 })

@@ -1,0 +1,10 @@
+.main-container {
+    display: flex;
+  }
+  
+  .content {
+    margin-left: 200px; /* Offset for sidebar */
+    padding: 20px;
+    width: calc(100% - 200px); /* Adjust width for sidebar */
+  }
+  

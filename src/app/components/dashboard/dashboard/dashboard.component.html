@@ -1,0 +1,19 @@
+<!--<app-header></app-header>
+<div class="main-container">
+  <app-nav-bar></app-nav-bar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>   //parte original-->
+
+
+
+
+<!--parte nueva-->
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-body>
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+</app-body>
+
+

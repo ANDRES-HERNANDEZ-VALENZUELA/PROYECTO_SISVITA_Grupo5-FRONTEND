@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject, LOCALE_ID, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import Swal from 'sweetalert2';
 import { UsuarioService } from '../../service/usuario/usuario.service';
+import { NavbarSimpleComponent } from '../navbar-simple/navbar-simple.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, NgbModule, NgxPaginationModule],
+  imports: [CommonModule, ReactiveFormsModule, NgbModule, NgxPaginationModule, NavbarSimpleComponent, RouterOutlet],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -26,13 +27,14 @@ export class LoginComponent {
 
 
   ){
-    this.user = localStorage.getItem('user');
 
     this.loginForm = new FormGroup({
       correo: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required]),
     });
+    localStorage.removeItem('user');
   }
+  
   login() {
     if (this.loginForm.valid) {
       const usuario={
@@ -43,11 +45,17 @@ export class LoginComponent {
       this.usuarioService.login(usuario).subscribe(
        (res: any) => {
           localStorage.setItem('token', res.access_token);
-          this.router.navigate(['vercontenido']);
+          localStorage.setItem('user_email', usuario.email);
+          console.log("local: ",localStorage.getItem('user_email'))
+
           Swal.fire({
             icon: 'success',
             title: 'Bienvenido!',
             text: res.message,
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.router.navigate(['/dashboard']);
+            }
           });
         },
         (err) => {

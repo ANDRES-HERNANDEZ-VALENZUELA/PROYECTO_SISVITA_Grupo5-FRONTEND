@@ -8,17 +8,38 @@ import { PaginaInicioLoginComponent } from './components/pagina-inicio-login/pag
 import { ResultadosComponent } from './components/pagina-inicio-login/pagina-inicio-login/resultados/resultados.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { NgIf, CommonModule } from '@angular/common';
+import { PrincipalComponent } from './components/principal/principal.component';
+import { NavBarComponent } from './components/navbar-v2/nav-bar/nav-bar.component';
+import { SidenavComponent } from './components/NAVBAR/sidenav/sidenav.component';
+import { BodyComponent } from './components/NAVBAR/body/body.component';
+//no pongas el browser module xD
+
+//del navbar bacan
+interface SideNavToggle{
+  screenWidth: number;
+  collapsed: boolean;
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarSimpleComponent, TestComponent, LoginComponent, RegistrarEstudianteComponent,PaginaInicioLoginComponent, ResultadosComponent,NgIf,CommonModule],
+  imports: [RouterOutlet, PrincipalComponent, CommonModule, NgIf, NavbarSimpleComponent, SidenavComponent, BodyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'SISIVITA (GRUPO5)';
   showNavbar = false;
+
+  //del navbar bacan
+  isSideNavCollapsed=false;
+  screenWidth=0;
+
+  //del navbar bacan
+  onToggleSideNav(data: SideNavToggle):void{
+    this.screenWidth=data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+  }
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
@@ -33,7 +54,7 @@ export class AppComponent {
     const routesWithNavbar = [
       '/principal',
       '/login',
-      '/registrar',
+      '/register',
     ];
     return routesWithNavbar.some(route => url.startsWith(route));
   }

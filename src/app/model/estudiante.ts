@@ -5,4 +5,5 @@ export interface Estudiante {
     id: number;
     last_name: string;
     student_code: string;
+    rol: string
 }

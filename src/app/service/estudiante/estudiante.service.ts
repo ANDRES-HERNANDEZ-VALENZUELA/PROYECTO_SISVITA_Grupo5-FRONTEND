@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Estudiante } from '../../model/estudiante';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -37,8 +37,15 @@ export class EstudianteService {
     return this.http.delete(`${this.BASE_URL}/delete`, {body:estudiante});
   }
 
-  getEstudianteporEmail(): Observable<Estudiante>{
-    return this.http.get<Estudiante>(`${this.BASE_URL}/buscarPorEmail`,{headers: this.headers}); //cuando llame a esa ruta del dolar, descarga
+ // getEstudianteporEmail(form: any): Object<Estudiante>{
+  //  return this.http.get<Estudiante>(`${this.BASE_URL}/buscarPorEmail`,form); //cuando llame a esa ruta del dolar, descarga
                                                                    //el resultado en el objeto Estudiante
+  //}
+
+  getEstudianteporEmail(estudiante_usuario: { email: string }): Observable<Estudiante> {
+    const params = new HttpParams().set('email', estudiante_usuario.email);
+    return this.http.get<Estudiante>(`${this.BASE_URL}/buscarPorEmail`, { headers: this.headers, params: params });
   }
+
+  
 }
