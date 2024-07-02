@@ -1,71 +1,33 @@
-/* Estilos para la barra lateral */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #f8f9fa;
-    border-right: 1px solid #dee2e6;
-    overflow-x: hidden;
-    padding-top: 20px;
-    transition: all 0.3s;
-}
-
-.sidebar ul {
-    padding-left: 0;
-}
-
-.sidebar .nav-link {
-    padding: 15px 20px;
-    color: #333;
-    transition: all 0.3s;
-    border-bottom: 1px solid transparent; /* Borde inferior inicial transparente */
-    border-left: 3px solid transparent; /* Borde izquierdo inicial transparente */
-}
-
-.sidebar .nav-link:hover {
-    background-color: #e9ecef;
-    color: #007bff;
-    border-bottom-color: #007bff; /* Color del borde inferior al pasar el ratón */
-}
-
-.sidebar .nav-link.active {
-    background-color: #007bff;
-    color: #fff;
-    border-left-color: #007bff; /* Color del borde izquierdo en el enlace activo */
-}
-
-/* Estilo para la información del usuario */
-.usuario-info {
-    background-color: #f8f9fa;
-    color: #000000;
-    padding: 15px;
-    border-bottom: 1px solid #dee2e6; /* Borde inferior para separar de los enlaces */
-    text-align: center; /* Alinea el contenido al centro */
-}
-
-.usuario-info img {
-    width: 120px; /* Ancho de la imagen */
-    height: 120px; /* Altura de la imagen */
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-    border: 2px solid #000000; /* Borde blanco alrededor de la imagen */
-}
-
-.usuario-info h5 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #000000;
-}
-
-/* Estilos adicionales */
-.sidebar .nav-link + .nav-link {
-    margin-top: 1px; /* Espacio entre enlaces */
-}
-
-/* Estilos para el contenido principal */
-main {
-    margin-left: 250px; /* Asegúrate de que el contenido principal tenga suficiente espacio a la izquierda */
-    padding: 20px;
-}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container label,
+  .filter-container select {
+    margin-left: 10px;
+  }
+  
+  .result-card {
+    max-width: 600px;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }

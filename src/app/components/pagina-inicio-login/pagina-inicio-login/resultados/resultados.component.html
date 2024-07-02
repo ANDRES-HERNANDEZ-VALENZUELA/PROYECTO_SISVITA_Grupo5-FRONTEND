@@ -1,74 +1,33 @@
-<div class="container mt-5">
-    <h2>Resultados del Test</h2>
-    <div *ngFor="let resultado of resultados" class="card mb-3">
+ <div class="container mt-5">
+    <h2>Resultados del Test: </h2>
+    <div class="filter-container">
+      <label for="order">Ordenar por:</label>
+      <select id="order" [(ngModel)]="order" (change)="sortResults()">
+        <option value="none">Sin filtros</option>
+        <option value="recent">Más recientes</option>
+        <option value="oldest">Más antiguos</option>
+      </select>
+    </div>
+    <div *ngFor="let resultado of resultados" class="card mb-3 result-card">
       <div class="card-body">
         <h5 class="card-title">{{ resultado.test_name }}</h5>
-        <p class="card-text">Fecha: {{ resultado.fecha | date:'medium' }}</p>
-        <p class="card-text">Puntaje: {{ resultado.puntaje }}</p>
-        <p class="card-text">Diagnóstico: {{ resultado.diagnosis_text }}</p>
+        <p class="card-text"><strong>- Fecha: </strong>{{ resultado.fecha | date:'medium':'UTC' }}</p>
+        <p class="card-text"><strong>- Puntaje: </strong>{{ resultado.puntaje }}</p>
+        <p class="card-text"><strong>- Diagnóstico: </strong>{{ resultado.diagnosis_text }}</p>
       </div>
     </div>
   </div>
 
-
-
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Contenido principal -->
-        <main class="col-md-9 ms-sm-auto col-lg-11 px-md-4">
-            <div class="container">
-                <h2>Resultados</h2>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Resultado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Usuario 1</td>
-                            <td>85%</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Usuario 2</td>
-                            <td>90%</td>
-                        </tr>
-                        <!-- Agrega aquí dinámicamente los datos según tu lógica de Angular -->
-                    </tbody>
-                </table>
-  
-                <h2>Detalles de Resultados</h2>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Fecha</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Usuario 1</td>
-                            <td>2024-06-26</td>
-                            <td>Detalles del resultado 1</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Usuario 2</td>
-                            <td>2024-06-27</td>
-                            <td>Detalles del resultado 2</td>
-                        </tr>
-                        <!-- Agrega aquí dinámicamente los datos según tu lógica de Angular -->
-                    </tbody>
-                </table>
-            </div>
-        </main>
+  <div class="container mt-5">
+    <h2>Evolución de resultados: </h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <canvas id="chart" width="400" height="400">{{chart}}</canvas>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  

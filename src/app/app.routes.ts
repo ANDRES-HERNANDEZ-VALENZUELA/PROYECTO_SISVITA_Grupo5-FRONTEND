@@ -41,7 +41,7 @@ export const routes: Routes = [
           //{ path: 'resultados', component: ResultadosComponent },
           //{ path: 'test', component: TestComponent },
           //{ path: '', redirectTo: 'perfil', pathMatch: 'full' }
-          {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+          {path: '', redirectTo: 'perfil', pathMatch: 'full'},
           {path: 'perfil', component: PaginaInicioLoginComponent },
           {path: 'dashboard', component: DashboardComponentt},
           {path: 'test', component: TestComponent },
