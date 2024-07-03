@@ -1,17 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarSimpleComponent } from './components/navbar-simple/navbar-simple.component';
-import { TestComponent } from './components/test/test.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegistrarEstudianteComponent } from './components/registrar-estudiante/registrar-estudiante.component';
-import { PaginaInicioLoginComponent } from './components/pagina-inicio-login/pagina-inicio-login.component';
-import { ResultadosComponent } from './components/pagina-inicio-login/pagina-inicio-login/resultados/resultados.component';
+import { NavbarSimpleComponent } from './components/home/NAVBAR_INICIAL/navbar-simple.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { NgIf, CommonModule } from '@angular/common';
-import { PrincipalComponent } from './components/principal/principal.component';
-import { NavBarComponent } from './components/navbar-v2/nav-bar/nav-bar.component';
-import { SidenavComponent } from './components/NAVBAR/sidenav/sidenav.component';
-import { BodyComponent } from './components/NAVBAR/body/body.component';
+import { PrincipalComponent } from './components/home/principal/principal.component';
+import { SidenavComponent } from './components/estudiante/sidenav/sidenav.component';
+import { BodyComponent } from './components/estudiante/body/body.component';
 //no pongas el browser module xD
 
 //del navbar bacan

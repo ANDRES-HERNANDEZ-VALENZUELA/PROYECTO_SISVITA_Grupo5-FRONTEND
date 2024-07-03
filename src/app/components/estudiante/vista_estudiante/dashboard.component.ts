@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '../../header/header/header.component';
-import { NavBarComponent } from '../../navbar-v2/nav-bar/nav-bar.component';
 import { CommonModule } from '@angular/common';
-import { SidenavComponent } from '../../NAVBAR/sidenav/sidenav.component';
-import { BodyComponent } from '../../NAVBAR/body/body.component';
+import { SidenavComponent } from '../sidenav/sidenav.component';
+import { BodyComponent } from '../body/body.component';
 
 //del navbar bacan
 interface SideNavToggle{
@@ -16,7 +14,7 @@ interface SideNavToggle{
   selector: 'app-dashboard',
   standalone: true,
   templateUrl: './dashboard.component.html',
-  imports:[RouterOutlet, CommonModule, HeaderComponent,SidenavComponent, BodyComponent],
+  imports:[RouterOutlet, CommonModule, SidenavComponent, BodyComponent],
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {

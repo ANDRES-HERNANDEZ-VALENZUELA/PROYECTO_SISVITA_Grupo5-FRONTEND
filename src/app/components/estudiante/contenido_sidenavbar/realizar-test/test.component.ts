@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TestService } from '../../../service/test/test.service';
+import { TestService } from '../../../../service/test/test.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { CommonModule, NgFor } from '@angular/common';

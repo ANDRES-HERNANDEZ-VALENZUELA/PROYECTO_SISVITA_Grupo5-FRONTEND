@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { EstudianteService } from '../../service/estudiante/estudiante.service';
-import { Estudiante } from '../../model/estudiante';
+import { EstudianteService } from '../../../../service/estudiante/estudiante.service';
+import { Estudiante } from '../../../../model/estudiante';
 import { NgModule } from '@angular/core';
 import Swal from 'sweetalert2';
 import { CommonModule } from '@angular/common';

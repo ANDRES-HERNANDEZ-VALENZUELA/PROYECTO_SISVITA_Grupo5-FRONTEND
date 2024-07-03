@@ -1,19 +1,18 @@
 import { Routes } from '@angular/router';
-import { PrincipalComponent } from './components/principal/principal.component';
-import { LoginComponent } from './components/login/login.component';
-import { TestComponent } from './components/realizar-testv2/test/test.component';
-import { RegistrarEstudianteComponent } from './components/registrar-estudiante/registrar-estudiante.component';
-import { PaginaInicioLoginComponent } from './components/pagina-inicio-login/pagina-inicio-login.component';
-import { ResultadosComponent } from './components/pagina-inicio-login/pagina-inicio-login/resultados/resultados.component';
-import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
-import { DashboardComponentt } from './components/NAVBAR/dashboard/dashboard.component';
-import { BodyComponent } from './components/NAVBAR/body/body.component';
-import { ProductsComponent } from './components/NAVBAR/products/products.component';
-import { StatisticsComponent } from './components/NAVBAR/statistics/statistics.component';
-import { CoupensComponent } from './components/NAVBAR/coupens/coupens.component';
-import { PagesComponent } from './components/NAVBAR/pages/pages.component';
-import { MediaComponent } from './components/NAVBAR/media/media.component';
-import { SettingsComponent } from './components/NAVBAR/settings/settings.component';
+import { PrincipalComponent } from './components/home/principal/principal.component';
+import { LoginComponent } from './components/home/login/login.component';
+import { TestComponent } from './components/estudiante/contenido_sidenavbar/realizar-test/test.component';
+import { RegistrarEstudianteComponent } from './components/home/registrar-estudiante/registrar-estudiante.component';
+import { PaginaInicioLoginComponent } from './components/estudiante/contenido_sidenavbar/perfil_estudiante/pagina-inicio-login.component';
+import { ResultadosComponent } from './components/estudiante/contenido_sidenavbar/resultados/resultados.component';
+import { DashboardComponent } from './components/estudiante/vista_estudiante/dashboard.component';
+import { DashboardComponentt } from './components/estudiante/NAVBAR_ESTUDIANTE/dashboard/dashboard.component';
+import { ProductsComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/products/products.component';
+import { StatisticsComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/statistics/statistics.component';
+import { CoupensComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/coupens/coupens.component';
+import { PagesComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/pages/pages.component';
+import { MediaComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/media/media.component';
+import { SettingsComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/settings/settings.component';
 
 export const routes: Routes = [
     //{ path: '', redirectTo: '/principal', pathMatch: 'full' }, //Indicamos que ni bien se ejecuta,se tenga la pagina1 de entrada

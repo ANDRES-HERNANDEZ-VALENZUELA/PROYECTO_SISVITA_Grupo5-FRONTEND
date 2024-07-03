@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResultadoService } from '../../../../service/resultado/resultado.service'; 
+import { ResultadoService } from '../../../../service/resultado/resultado.service';
 import { Resultado } from '../../../../model/resultado';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgModel } from '@angular/forms';

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarSimpleComponent } from '../navbar-simple/navbar-simple.component';
+import { NavbarSimpleComponent } from '../NAVBAR_INICIAL/navbar-simple.component';
 import { CommonModule } from '@angular/common';
 
 

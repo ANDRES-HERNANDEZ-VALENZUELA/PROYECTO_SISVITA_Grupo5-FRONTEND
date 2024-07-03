@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Estudiante } from '../../model/estudiante';
+import { Estudiante } from '../../../model/estudiante';
 import {ReactiveFormsModule, FormControl, FormsModule, FormGroup} from '@angular/forms';
-import { EstudianteService } from '../../service/estudiante/estudiante.service';
+import { EstudianteService } from '../../../service/estudiante/estudiante.service';
 import Swal from 'sweetalert2';
 import { CommonModule } from '@angular/common';
 import { Route, Router } from '@angular/router';
-import { NavbarSimpleComponent } from '../navbar-simple/navbar-simple.component';
+import { NavbarSimpleComponent } from '../NAVBAR_INICIAL/navbar-simple.component';
 
 @Component({
   selector: 'app-registrar-estudiante',

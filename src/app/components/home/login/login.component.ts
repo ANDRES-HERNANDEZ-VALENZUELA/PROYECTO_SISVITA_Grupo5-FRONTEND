@@ -5,8 +5,8 @@ import { Router, RouterOutlet } from '@angular/router';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import Swal from 'sweetalert2';
-import { UsuarioService } from '../../service/usuario/usuario.service';
-import { NavbarSimpleComponent } from '../navbar-simple/navbar-simple.component';
+import { UsuarioService } from '../../../service/usuario/usuario.service';
+import { NavbarSimpleComponent } from '../NAVBAR_INICIAL/navbar-simple.component';
 
 @Component({
   selector: 'app-login',
