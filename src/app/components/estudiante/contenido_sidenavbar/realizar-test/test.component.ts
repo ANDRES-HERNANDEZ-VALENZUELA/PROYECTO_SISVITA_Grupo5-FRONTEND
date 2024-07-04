@@ -46,10 +46,10 @@ export class TestComponent implements OnInit {
       if (response.diagnosis) {
         Swal.fire({
           title: 'Diagnóstico',
-          text: `Diagnóstico: ${response.diagnosis}`, 
+          text: `Diagnóstico: ${response.diagnosis}\nSemáforo: ${response.semaforo}`,
           icon: 'success'
         }).then(() => {
-          this.router.navigate(['/dashboard/perfil']);  // Redirect to main page
+          this.router.navigate(['/vistaEstudiante/perfil']);  // va a tu pagina de perfil
         });
       } else {
         Swal.fire({
