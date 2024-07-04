@@ -835,7 +835,7 @@ var MagdalenaDelMarDelimeters = [
     { lng: -77.063, lat: -12.0862 }
 ];
 
-var MagdalenaViejaDelimeters = [
+var PueblolibreDelimeters = [
     { lng: -77.0608, lat: -12.0666 },
     { lng: -77.0543, lat: -12.0659 },
     { lng: -77.0501, lat: -12.0704 },
