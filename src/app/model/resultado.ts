@@ -6,5 +6,7 @@ export interface Resultado {
     test_name: string;
     diagnosis_id: number;
     diagnosis_text: string;
+    semaforo: string;
+    distrito: string;
   }
   

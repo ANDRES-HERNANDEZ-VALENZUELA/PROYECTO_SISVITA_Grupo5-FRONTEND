@@ -20,4 +20,8 @@ export class ResultadoService {
   getResultadosByCodigoEntidad(codigoEntidad: string): Observable<Resultado[]> {
     return this.http.get<Resultado[]>(`${this.BASE_URL}/${codigoEntidad}`, { headers: this.headers });
   }
+
+  getAllResultados(): Observable<any[]> {
+    return this.http.get<Resultado[]>(`${this.BASE_URL}/all`);
+  }
 }

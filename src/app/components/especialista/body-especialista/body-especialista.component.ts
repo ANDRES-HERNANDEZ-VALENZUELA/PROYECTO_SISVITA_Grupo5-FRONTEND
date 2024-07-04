@@ -6,7 +6,7 @@ import { Router, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-body-especialista',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './body-especialista.component.html',
   styleUrl: './body-especialista.component.css'
 })

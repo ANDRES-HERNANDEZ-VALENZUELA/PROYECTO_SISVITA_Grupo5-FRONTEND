@@ -1,42 +1,49 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-mapa-de-calor',
-  standalone: true,
-  imports: [],
-  templateUrl: './mapa-de-calor.component.html',
-  styleUrl: './mapa-de-calor.component.css'
-})
-export class MapaDeCalorComponent {
-
-}
-
------------------------------------------------------------------------------------
-
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { GoogleMap, MapHeatmapLayer } from '@angular/google-maps';
+import { ResultadoService } from '../../../../service/resultado/resultado.service';
+import { NgIf, NgFor } from '@angular/common';
+import { Resultado } from '../../../../model/resultado';
 
 interface HeatmapData {
   lng: number;
   lat: number;
 }
-
 @Component({
-  selector: 'app-root',
+  selector: 'app-mapa-de-calor',
   standalone: true,
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   imports: [
-    RouterOutlet, GoogleMap, MapHeatmapLayer
+    RouterOutlet, GoogleMap, MapHeatmapLayer, NgIf, NgFor
   ],
+  templateUrl: './mapa-de-calor.component.html',
+  styleUrl: './mapa-de-calor.component.css'
 })
-export class AppComponent {
+export class MapaDeCalorComponent implements OnInit{
   title = 'mapas-calor';
 
+  resultados: Resultado[] = [];
+
+  constructor(private resultadosService: ResultadoService) { }
+
+  ngOnInit(): void {
+    this.obtenerResultados();
+  }
+
+  obtenerResultados(): void {
+    this.resultadosService.getAllResultados().subscribe(
+      (data:Resultado[]) => {
+        this.resultados = data;
+        console.log('Resultados obtenidos:', this.resultados);
+      },
+      (error) => {
+        console.error('Error al obtener resultados:', error);
+      }
+    );
+  }
+
   center = { lat: -12.008577236754943, lng: -77.03108422612709 }; // Centro de Lima
-  zoom = 12;
-  heatmapOptions = { radius: 10 };
+  zoom = 11;
+  heatmapOptions = { radius: 15 };
 
   // Diccionario para almacenar los datos del mapa de calor por distrito
   districtHeatmapData: { [key: string]: HeatmapData[] } = {
@@ -1751,4 +1758,5 @@ export class AppComponent {
       console.warn(`No hay datos de mapa de calor disponibles para el distrito: ${district}`);
     }
 }
+
 }
