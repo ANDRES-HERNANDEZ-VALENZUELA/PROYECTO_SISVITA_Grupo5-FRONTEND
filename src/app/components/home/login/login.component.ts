@@ -59,8 +59,7 @@ export class LoginComponent {
               if (res.role == 'Estudiante'){
                 this.router.navigate(['/vistaEstudiante']);
               }else{
-                //acá vas a poner la ruta de la vista estudiante
-                this.router.navigate(['principal'])
+                this.router.navigate(['/vistaEspecialista'])
               }
                 
             }

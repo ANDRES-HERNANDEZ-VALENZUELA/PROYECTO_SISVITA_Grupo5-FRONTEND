@@ -13,6 +13,11 @@ import { CoupensComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/coup
 import { PagesComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/pages/pages.component';
 import { MediaComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/media/media.component';
 import { SettingsComponent } from './components/estudiante/NAVBAR_ESTUDIANTE/settings/settings.component';
+import { VistaEspecialistaComponent } from './components/especialista/vista-especialista/vista-especialista.component';
+import { PerfilEspecialistaComponent } from './components/especialista/contenido_sidenavbar_e/perfil-especialista/perfil-especialista.component';
+import { MapaDeCalorComponent } from './components/especialista/contenido_sidenavbar_e/mapa-de-calor/mapa-de-calor.component';
+import { GenerarCitaComponent } from './components/especialista/contenido_sidenavbar_e/generar-cita/generar-cita.component';
+import { VigilanciaComponent } from './components/especialista/contenido_sidenavbar_e/vigilancia/vigilancia.component';
 
 export const routes: Routes = [
     //{ path: '', redirectTo: '/principal', pathMatch: 'full' }, //Indicamos que ni bien se ejecuta,se tenga la pagina1 de entrada
@@ -57,12 +62,13 @@ export const routes: Routes = [
       },
       {
         path: 'vistaEspecialista',
-        component:,
+        component: VistaEspecialistaComponent,
         children:[
           {path: '', redirectTo: 'perfilEspecialista', pathMatch: 'full'},
-          {path: 'perfilEspecialista', component:},
-          {path: 'vigilancia', component: },
-          {path: 'generarCita', component: },
+          {path: 'perfilEspecialista', component: PerfilEspecialistaComponent},
+          {path: 'vigilancia', component: VigilanciaComponent},
+          {path: 'generarCita', component: GenerarCitaComponent},
+          {path: 'mapaDeCalor', component: MapaDeCalorComponent},
         ]
       },
     { path: '**', redirectTo: '' }
