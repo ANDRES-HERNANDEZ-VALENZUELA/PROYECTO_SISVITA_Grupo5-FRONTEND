@@ -14,6 +14,19 @@
             <div class="card-body">
                 <h5 class="card-title">Registro de Estudiantes</h5>
                 <!--inicio formulario-->
+                <div>
+                  <select [(ngModel)]="selectedDepartment" (change)="onDepartmentChange()">
+                    <option *ngFor="let department of departments" [value]="department.id">{{ department.name }}</option>
+                  </select>
+                  
+                  <select [(ngModel)]="selectedProvince" (change)="onProvinceChange()">
+                    <option *ngFor="let province of provinces" [value]="province.id">{{ province.name }}</option>
+                  </select>
+                  
+                  <select [(ngModel)]="selectedDistrict">
+                    <option *ngFor="let district of districts" [value]="district.id">{{ district.name }}</option>
+                  </select>
+                </div>
                 <form class="needs-validation" [formGroup]="estudianteForm">
                   <div class="row mb-3">
                     <div class="col-md-6">
@@ -48,6 +61,12 @@
                     <div class="col-md-6">
                       <label for="facultad" class="form-label">Facultad</label>
                       <input type="text" class="form-control" id="facultad" formControlName="facultad" required>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="celular" class="form-label">Celular</label>
+                      <input type="text" class="form-control" id="celular" formControlName="celular" required>
                     </div>
                   </div>
                   <div class="d-grid">

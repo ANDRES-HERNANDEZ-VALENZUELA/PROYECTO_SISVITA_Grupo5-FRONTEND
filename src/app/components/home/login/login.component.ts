@@ -46,7 +46,9 @@ export class LoginComponent {
        (res: any) => {
           localStorage.setItem('token', res.access_token);
           localStorage.setItem('user_email', usuario.email);
+          localStorage.setItem('role', res.role)
           console.log("local: ",localStorage.getItem('user_email'))
+          console.log("rol obtenido del usuario:", localStorage.getItem('role'))
 
           Swal.fire({
             icon: 'success',
@@ -54,7 +56,13 @@ export class LoginComponent {
             text: res.message,
           }).then((result) => {
             if (result.isConfirmed) {
-              /*this.router.navigate(['/vistaEstudiante']);*/
+              if (res.role == 'Estudiante'){
+                this.router.navigate(['/vistaEstudiante']);
+              }else{
+                //acá vas a poner la ruta de la vista estudiante
+                this.router.navigate(['principal'])
+              }
+                
             }
           });
         },

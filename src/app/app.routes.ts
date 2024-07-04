@@ -55,6 +55,16 @@ export const routes: Routes = [
           {path: 'settings', component: SettingsComponent},
         ]
       },
+      {
+        path: 'vistaEspecialista',
+        component:,
+        children:[
+          {path: '', redirectTo: 'perfilEspecialista', pathMatch: 'full'},
+          {path: 'perfilEspecialista', component:},
+          {path: 'vigilancia', component: },
+          {path: 'generarCita', component: },
+        ]
+      },
     { path: '**', redirectTo: '' }
 
 
