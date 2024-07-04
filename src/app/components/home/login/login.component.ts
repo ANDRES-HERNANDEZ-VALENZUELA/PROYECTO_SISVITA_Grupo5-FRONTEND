@@ -54,7 +54,7 @@ export class LoginComponent {
             text: res.message,
           }).then((result) => {
             if (result.isConfirmed) {
-              this.router.navigate(['/dashboard']);
+              /*this.router.navigate(['/vistaEstudiante']);*/
             }
           });
         },

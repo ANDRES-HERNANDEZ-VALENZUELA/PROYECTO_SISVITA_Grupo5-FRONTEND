@@ -33,7 +33,7 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component:RegistrarEstudianteComponent},
     {
-        path: 'dashboard',
+        path: 'vistaEstudiante',
         component: DashboardComponent,
         children: [
           //{ path: 'perfil', component: PaginaInicioLoginComponent },
@@ -42,9 +42,11 @@ export const routes: Routes = [
           //{ path: '', redirectTo: 'perfil', pathMatch: 'full' }
           {path: '', redirectTo: 'perfil', pathMatch: 'full'},
           {path: 'perfil', component: PaginaInicioLoginComponent },
-          {path: 'dashboard', component: DashboardComponentt},
           {path: 'test', component: TestComponent },
           {path: 'resultados', component: ResultadosComponent },
+
+          //estos de acá son para probar, pero se van a borrar luego
+          {path: 'dashboard', component: DashboardComponentt},
           {path: 'products', component: ProductsComponent},
           {path: 'statistics', component: StatisticsComponent},
           {path: 'coupens', component: CoupensComponent},
