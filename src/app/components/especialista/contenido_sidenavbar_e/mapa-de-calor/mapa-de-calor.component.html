@@ -1,1 +1,54 @@
-<p>mapa-de-calor works!</p>
+<div class="map-container">
+    <div class="controls">
+      <label for="district-select">Seleccionar Distrito:</label>
+      <select id="district-select" (change)="setDistrict($event)">
+        <option value="Ancon">Ancon</option>
+        <option value="Ate">Ate</option>
+        <option value="Breña">Breña</option>
+        <option value="Carabayllo">Carabayllo</option>
+        <option value="Lima">Lima</option>
+        <option value="Chaclacayo">Chaclacayo</option>
+        <option value="Chorrillos">Chorrillos</option>
+        <option value="Cieneguilla">Cieneguilla</option>
+        <option value="Comas">Comas</option>
+        <option value="ElAgustino">ElAgustino</option>
+        <option value="Independencia">Independencia</option>
+        <option value="JesusMaria">JesusMaria</option>
+        <option value="LaMolina">LaMolina</option>
+        <option value="LaVictoria">LaVictoria</option>
+        <option value="Lince">Lince</option>
+        <option value="LosOlivos">LosOlivos</option>
+        <option value="Lurigancho">Lurigancho</option>
+        <option value="Lurin">Lurin</option>
+        <option value="MagdalenaDelMar">MagdalenaDelMar</option>
+        <option value="Pueblolibre">Pueblolibre</option>
+        <option value="Miraflores">Miraflores</option>
+        <option value="Pachacamac">Pachacamac</option>
+        <option value="Pucusana">Pucusana</option>
+        <option value="PuentePiedra">PuentePiedra</option>
+        <option value="PuntaHermosa">PuntaHermosa</option>
+        <option value="PuntaNegra">PuntaNegra</option>
+        <option value="Rimac">Rimac</option>
+        <option value="SanBartolo">SanBartolo</option>
+        <option value="SanBorja">SanBorja</option>
+        <option value="SanIsidro">SanIsidro</option>
+        <option value="SanJuanDeLurigancho">SanJuanDeLurigancho</option>
+        <option value="SanJuanDeMiraflores">SanJuanDeMiraflores</option>
+        <option value="SanLuis">SanLuis</option>
+        <option value="SanMartinDePorres">SanMartinDePorres</option>
+        <option value="SanMiguel">SanMiguel</option>
+        <option value="SantaAnita">SantaAnita</option>
+        <option value="SantaMariaDelMar">SantaMariaDelMar</option>
+        <option value="SantaRosa">SantaRosa</option>
+        <option value="SantiagoDeSurco">SantiagoDeSurco</option>
+        <option value="Surquillo">Surquillo</option>
+        <option value="VillaElSalvador">VillaElSalvador</option>
+        <option value="VillaMariaDelTriunfo">VillaMariaDelTriunfo</option>
+        <!-- agregar otros distritos -->
+      </select>
+    </div>
+    <google-map height="1000px" width="100%" [center]="center" [zoom]="zoom">
+      <map-heatmap-layer [data]="heatmapData" [options]="heatmapOptions"></map-heatmap-layer>
+    </google-map>
+  </div>
+  
