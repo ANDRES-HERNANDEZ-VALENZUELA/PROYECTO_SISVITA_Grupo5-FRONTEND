@@ -6,17 +6,17 @@ export const navbarDataE=[
     },
     {
         routeLink: 'vigilancia',
-        icon: 'fal fa-file-alt',
+        icon: 'fas fa-eye',
         label: 'Vigilancia'
     },
     {
         routeLink: 'generarCita',
-        icon: 'fal fa-file-alt',
+        icon: 'fas fa-calendar-plus',
         label: 'Generar Cita'
     },
     {
         routeLink: 'mapaDeCalor',
-        icon: 'fal fa-file-alt',
+        icon: 'ffas fa-map-marked-alt',
         label: 'Mapa de Calor'
     },
 ];

@@ -1,32 +1,36 @@
- <div class="container mt-5">
-    <h2>Resultados del Test: </h2>
-    <div class="filter-container">
-      <label for="order">Ordenar por:</label>
-      <select id="order" [(ngModel)]="order" (change)="sortResults()">
-        <option value="none">Sin filtros</option>
-        <option value="recent">Más recientes</option>
-        <option value="oldest">Más antiguos</option>
-      </select>
-    </div>
-    <div *ngFor="let resultado of resultados" class="card mb-3 result-card">
-      <div class="card-body">
-        <h5 class="card-title">{{ resultado.test_name }}</h5>
-        <p class="card-text"><strong>- Fecha: </strong>{{ resultado.fecha | date:'medium':'UTC' }}</p>
-        <p class="card-text"><strong>- Puntaje: </strong>{{ resultado.puntaje }}</p>
-        <p class="card-text"><strong>- Diagnóstico: </strong>{{ resultado.diagnosis_text }}</p>
+<div class="container mt-5">
+  <div class="row">
+    <!-- Columna izquierda: Historial de resultados -->
+    <div class="col-md-6">
+      <h2>Resultados del Test: </h2>
+      <div class="filter-container mb-3">
+        <label for="order">Ordenar por:    </label>
+        <select id="order" [(ngModel)]="order" (change)="sortResults()">
+          <option value="none">Sin filtros</option>
+          <option value="recent">Más recientes</option>
+          <option value="oldest">Más antiguos</option>
+        </select>
+      </div>
+      <div *ngFor="let resultado of resultados" class="card mb-3 result-card">
+        <div class="card-body">
+          <h5 class="card-title">{{ resultado.test_name }}</h5>
+          <p class="card-text"><strong>- Fecha: </strong>{{ resultado.fecha | date:'medium':'UTC' }}</p>
+          <p class="card-text"><strong>- Puntaje: </strong>{{ resultado.puntaje }}</p>
+          <p class="card-text"><strong>- Diagnóstico: </strong>{{ resultado.diagnosis_text }}</p>
+          <p class="card-text"><strong>- Semáforo: </strong>{{ resultado.semaforo }}</p>
+          <p class="card-text"><strong>- Distrito: </strong>{{ resultado.distrito }}</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container mt-5">
-    <h2>Evolución de resultados: </h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-body">
-            <canvas id="chart" width="400" height="400">{{chart}}</canvas>
-          </div>
+    <!-- Columna derecha: Gráfico -->
+    <div class="col-md-6">
+      <h2>Evolución de resultados: </h2>
+      <div class="card">
+        <div class="card-body">
+          <canvas id="chart" width="400" height="400">{{chart}}</canvas>
         </div>
       </div>
     </div>
   </div>
+</div>

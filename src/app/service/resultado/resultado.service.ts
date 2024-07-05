@@ -22,6 +22,6 @@ export class ResultadoService {
   }
 
   getAllResultados(): Observable<any[]> {
-    return this.http.get<Resultado[]>(`${this.BASE_URL}/all`);
+    return this.http.get<Resultado[]>(`${this.BASE_URL}/alumnos`);
   }
 }
